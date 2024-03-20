@@ -29,5 +29,6 @@ jobs:
     - name: Build and push the Docker image
       uses: docker/build-push-action@v3.2.0
       with:
+        context: ./docker/
         tags: jw78guro/cronicle:live
         push: true
