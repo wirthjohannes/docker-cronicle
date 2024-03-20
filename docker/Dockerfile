@@ -2,6 +2,7 @@ FROM node:20-alpine
 RUN apk add procps curl
 WORKDIR /opt/cronicle
 RUN curl -s https://raw.githubusercontent.com/jhuckaby/Cronicle/master/bin/install.js | node
+COPY docker-entrypoint.js /opt/cronicle/bin
 ENV CRONICLE_foreground=1
 ENV CRONICLE_echo=1
 ENV CRONICLE_color=1
